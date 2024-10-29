@@ -14,7 +14,7 @@
          @csrf
         <div>
             <x-input-label for="avatar" value="Avatar" />
-            <x-text-input id="avatar" name="name" type="file" class="mt-1 block w-full" :value="old('avatar', $user->avatar)" required autofocus autocomplete="name" />
+            <x-text-input id="avatar" name="name" type="file" class="mt-1 block w-full" :value="old('avatar', $user->avatar)"  autofocus autocomplete="name" />
             <x-input-error class="mt-2" :messages="$errors->get('avatar')" />
         </div>
 
