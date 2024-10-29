@@ -7,8 +7,14 @@ use Illuminate\Http\Request;
 
 class AvatarController extends Controller
 {
-    public function update()
+    public function update(Request $request)
     {
+        $request->validate([
+            'avatar' => 'required|image',
+            
+        ]);
+
+        dd($request->all());
         return response()->redirectto(route('profile.edit'));
     }
 }

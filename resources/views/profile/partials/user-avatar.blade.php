@@ -8,7 +8,7 @@
            Avatar add or update here
         </p>
     </header>
-    <form method="post" action="{{route('profile.avatar')}}">
+    <form method="post" action="{{route('profile.avatar')}}" enctype='multipart/form-data'>
         @method('patch')
         <!-- <input type="hidden" name="_token" value='{{csrf_token()}}'> -->
          @csrf
