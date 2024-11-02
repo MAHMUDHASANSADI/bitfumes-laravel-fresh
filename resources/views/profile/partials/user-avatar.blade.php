@@ -3,6 +3,7 @@
         <h2 class="text-lg font-medium text-gray-900 dark:text-gray-100">
             Avatar Form
         </h2>
+        <img width='50' hight='50' class="w-1 h-1 rounded-full" src="{{ asset("storage/$user->avatar") }}" alt="avatar" />
 
         <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">
            Avatar add or update here
@@ -14,7 +15,7 @@
          @csrf
         <div>
             <x-input-label for="avatar" value="Avatar" />
-            <x-text-input id="avatar" name="name" type="file" class="mt-1 block w-full" :value="old('avatar', $user->avatar)"  autofocus autocomplete="name" />
+            <x-text-input id="avatar" name="avatar" type="file" class="mt-1 block w-full" :value="old('avatar', $user->avatar)"  autofocus autocomplete="name" />
             <x-input-error class="mt-2" :messages="$errors->get('avatar')" />
         </div>
 
