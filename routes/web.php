@@ -3,6 +3,10 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Profile\AvatarController;
 use Illuminate\Support\Facades\Route;
+use OpenAI\Laravel\Facades\OpenAI; 
+use OpenAI\Responses\Completions\CreateResponse;
+use App\Http\Controllers\OpenAIController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -31,3 +35,6 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
+
+Route::get('/openai/generate', [OpenAIController::class, 'generateText']);
